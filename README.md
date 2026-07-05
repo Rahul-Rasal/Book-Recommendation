@@ -64,7 +64,7 @@ example:
 
 ## Dataset
 
-**Source:** Kaggle — *Books Dataset for NLP & Recommendation Systems*
+**Source:** Kaggle *Books Dataset for NLP & Recommendation Systems*
 
 **Link:** https://www.kaggle.com/datasets/sinatavakoli/books-dataset-for-nlp-and-recommendation-systems
 
