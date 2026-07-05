@@ -1,0 +1,59 @@
+services:
+  mysql:
+    image: mysql:8.0.38
+    container_name: book_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: books_db
+      MYSQL_USER: books_user
+      MYSQL_PASSWORD: books_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - book_network
+
+  backend:
+    build:
+      context: ./Backend  
+    container_name: book_backend
+    restart: always
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: books_db
+      DB_USER: books_user
+      DB_PASSWORD: books_password
+    ports:
+      - "8000:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - book_network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: book_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - book_network
+
+volumes:
+  mysql_data:
+
+networks:
+  book_network:
+    driver: bridge
