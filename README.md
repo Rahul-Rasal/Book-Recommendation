@@ -273,11 +273,12 @@ Book_R/
 The backend runs this once on startup (via FastAPI's lifespan handler in
 `main.py` → `initialize_application()` in `startup.py`):
 
-1. SQLAlchemy creates the database tables if they don't already exist.
-2. The CSV is imported if the `books` table is empty, skipped otherwise.
-3. All books are loaded from MySQL into memory.
-4. The TF-IDF model and cosine similarity matrix are built in memory.
-5. The API is ready to serve requests.
+1. Wait for the database to accept connections (retry loop).
+2. SQLAlchemy creates the database tables if they don't already exist.
+3. The CSV is imported if the `books` table is empty, skipped otherwise.
+4. All books are loaded from MySQL into memory.
+5. The TF-IDF model and cosine similarity matrix are built in memory.
+6. The API is ready to serve requests.
 
 ---
 
