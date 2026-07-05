@@ -9,6 +9,28 @@ other over a custom Docker network.
 
 ---
 
+## Table of Contents
+
+- [Why I Chose This Project](#why-i-chose-this-project)
+- [What Makes It Different](#what-makes-it-different)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Dataset](#dataset)
+  - [Data preparation](#data-preparation)
+- [Recommendation Algorithm](#recommendation-algorithm)
+  - [Key settings](#key-settings-appconstantssettingspy)
+- [API Endpoints](#api-endpoints)
+- [Running the Project Using Docker](#running-the-project-using-docker)
+- [Local Development (without Docker)](#local-development-without-docker)
+- [Environment Variables](#environment-variables)
+- [Folder Structure](#folder-structure)
+- [Backend Startup Flow](#backend-startup-flow)
+- [Screenshots](#screenshots)
+- [Limitations](#limitations)
+- [Future Improvements](#future-improvements)
+- [A Note on AI Usage](#a-note-on-ai-usage)
+
 ## Why I Chose This Project
 
 I chose a book recommender because people often spend too much time trying to find
@@ -252,7 +274,7 @@ The backend runs this once on startup (via FastAPI's lifespan handler in
 `main.py` → `initialize_application()` in `startup.py`):
 
 1. SQLAlchemy creates the database tables if they don't already exist.
-2. The CSV is imported if the `books` table is empty (idempotent — skipped otherwise).
+2. The CSV is imported if the `books` table is empty, skipped otherwise.
 3. All books are loaded from MySQL into memory.
 4. The TF-IDF model and cosine similarity matrix are built in memory.
 5. The API is ready to serve requests.
@@ -278,7 +300,7 @@ The backend runs this once on startup (via FastAPI's lifespan handler in
 ## Limitations
 
 - No user login or personalization.
-- No genre-based recommendation — the dataset has no genre column, so the app never
+- No genre-based recommendation the dataset has no genre column, so the app never
   claims genre similarity.
 - Similarity is based mainly on description text.
 - The in-memory similarity matrix works well for this dataset size but would need a
