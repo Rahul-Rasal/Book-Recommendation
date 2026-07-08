@@ -5,7 +5,7 @@ recommended method is Docker (plug-and-play, one command). A manual setup withou
 Docker is also documented for local development.
 
 For how to *use* the application after it is running, see the
-[User Manual](USER_MANUAL.md).
+[User Manual](UserManual.md).
 
 ---
 
@@ -114,7 +114,7 @@ You can confirm each part is working:
   ```
 
 If both of these work, the application is installed and running correctly. See the
-[User Manual](USER_MANUAL.md) for how to search and get recommendations.
+[User Manual](UserManual.md) for how to search and get recommendations.
 
 ---
 
