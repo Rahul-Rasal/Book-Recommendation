@@ -22,6 +22,7 @@ other over a custom Docker network.
   - [Key settings](#key-settings-appconstantssettingspy)
 - [API Endpoints](#api-endpoints)
 - [Running the Project Using Docker](#running-the-project-using-docker)
+- [How to Use](#how-to-use)
 - [Local Development (without Docker)](#local-development-without-docker)
 - [Environment Variables](#environment-variables)
 - [Folder Structure](#folder-structure)
@@ -62,7 +63,7 @@ example:
 - A plain-language "Why recommended?" explanation on every result.
 - "Read more" dialog with the full description and reasons.
 - Health-check endpoint for the backend.
-- Fully containerized — one command to run everything.
+- Fully containerized one command to run everything.
 
 ---
 
@@ -182,6 +183,16 @@ To stop and also remove the database volume (fresh start):
 ```bash
 docker compose down -v
 ```
+
+---
+
+## How to Use
+
+1. Open the app at http://localhost:5173.
+2. Type a book title or author in the search box.
+3. Select a book from the suggestions that appear.
+4. Click "Recommend Similar Books."
+5. Browse the recommended books. Each card shows the cover, author, rating, and a "Why recommended?" explanation. Click "Read more" on any card to see the full description.
 
 ---
 
