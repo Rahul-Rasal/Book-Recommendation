@@ -21,8 +21,8 @@ other over a custom Docker network.
 - [Recommendation Algorithm](#recommendation-algorithm)
   - [Key settings](#key-settings-appconstantssettingspy)
 - [API Endpoints](#api-endpoints)
-- [Running the Project Using Docker](#running-the-project-using-docker)
-- [How to Use](#how-to-use)
+- [Installation Guide](#installation-guide)
+- [User Manual](#user-manual)
 - [Local Development (without Docker)](#local-development-without-docker)
 - [Environment Variables](#environment-variables)
 - [Folder Structure](#folder-structure)
@@ -156,7 +156,7 @@ GET /recommendations/1
 
 ---
 
-## Running the Project Using Docker
+## Installation Guide
 
 **Prerequisite:** Docker Desktop installed and running.
 
@@ -186,7 +186,7 @@ docker compose down -v
 
 ---
 
-## How to Use
+## User Manual
 
 1. Open the app at http://localhost:5173.
 2. Type a book title or author in the search box.
