@@ -12,11 +12,11 @@ For how to *use* the application after it is running, see the
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
-- [Method 1 Run with Docker (Recommended)](#method-1--run-with-docker-recommended)
+- [Method 1 Run with Docker (Recommended)](#method-1-run-with-docker-recommended)
 - [Verifying the Application Is Running](#verifying-the-application-is-running)
 - [Stopping the Application](#stopping-the-application)
 - [Resetting to a Fresh State](#resetting-to-a-fresh-state)
-- [Method 2 Manual Setup (Without Docker)](#method-2--manual-setup-without-docker)
+- [Method 2 Manual Setup (Without Docker)](#method-2-manual-setup-without-docker)
 - [Ports Used](#ports-used)
 - [Troubleshooting](#troubleshooting)
 
