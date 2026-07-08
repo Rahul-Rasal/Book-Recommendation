@@ -188,11 +188,33 @@ docker compose down -v
 
 ## User Manual
 
+Book Recommender helps you discover books similar to one you already like. You start
+from a book you know, and the app suggests similar titles with a short reason for each.
+
+**Finding recommendations**
+
 1. Open the app at http://localhost:5173.
-2. Type a book title or author in the search box.
-3. Select a book from the suggestions that appear.
-4. Click "Recommend Similar Books."
-5. Browse the recommended books. Each card shows the cover, author, rating, and a "Why recommended?" explanation. Click "Read more" on any card to see the full description.
+2. In the search box, type a book title or an author's name.
+3. A list of matching books appears as you type. Click the one you want.
+4. The selected book is shown with its cover, author, rating, and details.
+5. Click **"Recommend Similar Books."**
+6. A set of recommended books appears below. Each card shows the cover, title, author,
+   rating, a short description, and a **"Why recommended?"** explanation listing the
+   reasons the book was suggested (for example, a similar description, the same author,
+   a high rating, or a similar publication period).
+7. Click **"Read more"** on any card to open a dialog with the full description and the
+   full list of reasons. Click **Close** to return.
+
+**Pages**
+
+- **Home** – search for a book and view recommendations.
+- **About** – a short description of the project and what it does. Use the top
+  navigation bar to switch between Home and About.
+
+**Tips**
+
+- Search is case-insensitive and matches by title or author.
+- To start a new search, simply clear the box and type a different title.
 
 ---
 
