@@ -10,6 +10,14 @@ from app.services.import_service import import_books_if_needed
 
 
 def wait_for_database(max_retries: int = 30, delay_seconds: int = 2) -> None:
+
+    """
+    Wait until the database is ready to accept connections.
+
+    On a fresh `docker compose up`, MySQL needs time to initialize before it
+    can accept real connections. Instead of failing on the first attempt, this
+    retries the connection a few times, so the backend starts reliably.
+    """
    
     for attempt in range(1, max_retries + 1):
         try:
