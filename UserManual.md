@@ -44,7 +44,7 @@ http://localhost:5173
  
 You will see the home page with a title banner and a search box.
  
-![Home page with search box and selected book](screenshot-home.png)
+![Home page with search box and selected book](docs/screenshot-home.png)
  
 ---
  
@@ -84,7 +84,7 @@ section below the search box).
 Each recommended book is shown on its own card with the cover, title, author, rating,
 and a short preview of the description.
  
-![Recommended books shown as cards with explanations](screenshot-recommendations.png)
+![Recommended books shown as cards with explanations](docs/screenshot-recommendations.png)
  
 ---
  
@@ -114,7 +114,7 @@ description and the complete list of reasons:
    - The cover, author, and rating
    - The **full book description**
    - The full **"Why recommended?"** reasons
-![Read more dialog showing the full book description](screenshot-read-more.png)
+![Read more dialog showing the full book description](docs/screenshot-read-more.png)
  
 3. When you are finished, click **"Close"** (or click outside the dialog) to return to
    the recommendations.
@@ -149,7 +149,7 @@ Switching pages does not reload the browser.
 **The page does not load at http://localhost:5173**
 Make sure the application is running. From the project folder, run
 `docker compose up --build` and wait until the logs show that the backend startup is
-complete. See the [Installation Guide](../README.md#installation-guide).
+complete. See the [Installation Guide](/README.md#installation-guide).
  
 **Search shows no results**
 Try a different or shorter search term (for example, a single distinctive word from
