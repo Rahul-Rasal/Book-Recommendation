@@ -35,7 +35,7 @@ login just open the app and start searching.
 ## Getting Started
  
 Once the application is running (see the
-[Installation Guide](../README.md#installation-guide)), open your web browser and go
+[Installation Guide](/README.md#installation-guide)), open your web browser and go
 to:
  
 ```
